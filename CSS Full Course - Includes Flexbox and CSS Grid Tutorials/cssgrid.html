@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .d1 {
+        background: lightskyblue;
+      }
+      .d2 {
+        background: lightsalmon;
+        justify-self: center;
+      }
+      .d3 {
+        background: paleturquoise;
+        align-self: end;
+      }
+      .d4 {
+        background: lightpink;
+      }
+      .d5 {
+        background: palegreen;
+        grid-column: 2/4;
+        grid-row: 2/4;
+        grid-area: header;
+      }
+      .container {
+        font-size: 40px;
+        width: 100%;
+        background: lightgrey;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(60px,1fr)) 20px;
+        grid-template-rows: repeat(3,1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-gap: 10px 20px;
+        justify-items: center;
+        align-items: end;
+        grid-template-areas: "header header header" ". content content" "footer footer footer";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+  </body>
+</html>

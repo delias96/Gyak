@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .d1 {
+        background: lightskyblue;
+        grid-area: header;
+      }
+      .d2 {
+        background: lightsalmon;
+        grid-area: advert;
+      }
+      .d3 {
+        background: paleturquoise;
+        grid-area: content;
+        display: grid;
+        grid-template-columns: auto 1fr;
+      }
+      .d4 {
+        background: lightpink;
+        grid-area: footer;
+      }
+      .d5 {
+        background: palegreen;
+        grid-area: header;
+      }
+      .itemOne{
+          background: lightgreen;
+      }
+      .itemTwo{
+          background: lightyellow;
+      }
+      .container {
+        font-size: 1.5em;
+        min-height: 300px;
+        width: 100%;
+        background: lightgrey;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto 1fr auto;
+        grid-gap: 10px;
+        grid-template-areas: "header" "advert" "content" "footer";
+      }
+      @media (min-width: 300px) {
+        .container {
+          grid-template-columns: auto 1fr;
+          grid-template-rows: auto 1fr auto;
+          grid-template-areas:
+            "advert header"
+            "advert content"
+            "advent footer";
+        }
+      }
+      @media (min-width: 400px) {
+        .container {
+          grid-template-columns: auto 1fr;
+          grid-template-rows: auto 1fr auto;
+          grid-template-areas:
+            "header header"
+            "advert content"
+            "footer footer";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="d1">header</div>
+      <div class="d2">advert</div>
+      <div class="d3">
+        <p class="itemOne">Paragraph1</p>
+        <p class="itemTwo">Paragraph2</p>
+      </div>
+      <div class="d4">footer</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CatPhotoApp</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      [type='checkbox']{
+        margin: 10px 0px 15px 0px;
+      }
+      #cat-photo-form {
+        background-color: green;
+      }
+      .silver-background {
+        background-color: silver;
+      }
+      .thick-green-border {
+        border-color: green;
+        border-width: 10px;
+        border-style: solid;
+        border-radius: 50%;
+      }
+      .larger-image {
+        width: 500px;
+      }
+      .blue-text {
+        color: blue;
+      }
+      .red-text {
+        color: red;
+      }
+      h2 {
+        background-color: blue;
+        color: blue;
+        font-family: Lobster, monospace;
+        border-color: red;
+        border-width: 5px;
+        border-style: solid;
+      }
+      p {
+        color: red;
+        font-size: 16px;
+        font-family: Helvetica, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <h2 class="red-text">CatPhotoApp</h2>
+    <main>
+      <h3>Cat Photos</h3>
+      <!--TODO: Add link to cat photos-->
+      <p class="blue-text">
+        Click here to view more <a href="#" target="_blank">cat photos</a>
+      </p>
+      <a href="#"
+        ><img
+          class="larger-image thick-green-border"
+          src="https://fcc.im/fcc-relaxing-cat"
+          alt="A cute orange cat lying on its back."
+      /></a>
+      <h3>Cat Lists</h3>
+      <div class="lists silver-background">
+        <p>Things cats <em>love:</em></p>
+        <ul>
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <img src="lasagna.jpg" alt="lasagna" />
+        <p>Things cats <strong>hate</strong></p>
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+      </div>
+      <img src="cats.jpg" alt="Cats" />
+      <form id="cat-photo-form" action="#/submit-cat-photo">
+        <label for="indoor"
+          ><input type="radio" name="indoor-outdoor" id="indoor" checked />
+          indoor</label
+        ><br />
+        <label for="outdoor"
+          ><input type="radio" name="indoor-outdoor" id="outdoor" />
+          outdoor</label
+        ><br />
+        <label for="loving"
+          ><input
+            id="loving"
+            type="checkbox"
+            name="personality"
+            checked
+          />Loving</label
+        ><br />
+        <label for="lazy"
+          ><input id="lazy" type="checkbox" name="personality" />lazy</label
+        ><br />
+        <label for="energetic"
+          ><input
+            id="energetic"
+            type="checkbox"
+            name="personality"
+          />energetic</label
+        ><br />
+        <input type="text" placeholder="cat photo URL" required />
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+    <footer>
+      <p>
+        <small
+          >No Copyright-
+          <a href="https://freeCodeCamp.org">freeCodeCamp.org</a></small
+        >
+      </p>
+    </footer>
+  </body>
+</html>
